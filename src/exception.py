@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 #sys have all information on any exception in the work environnement 
 def error_message_detail(error,error_detail:sys):
    #exc_tb have the information on the excetion or the error in which file and in which line
@@ -19,7 +19,8 @@ class CustomException(Exception):
     def __str__(self) :
         return self.error_messages
 
-
+    
+    
 
 
 
