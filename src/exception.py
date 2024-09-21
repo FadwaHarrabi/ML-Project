@@ -1,14 +1,14 @@
 import sys
 from src.logger import logging
 #sys have all information on any exception in the work environnement 
-def error_message_detail(error,error_detail:sys):
-   #exc_tb have the information on the excetion or the error in which file and in which line
-    _,_,exc_tb=error_detail.exc_info()
-    file_name=exc_tb.tb_frame.f_code.co_filename
-    error_messages="Error occured in python script name [{0}] line number [{1}]  error message [{2}]".format()  # noqa: F524
-    file_name,exc_tb.tb_lineno,str(error)
-
-    return error_messages
+def error_message_detail(error_message, error_detail):
+    _, _, exc_tb = error_detail.exc_info()
+    file_name = exc_tb.tb_frame.f_code.co_filename
+    line_number = exc_tb.tb_lineno
+    error_message = "Error occurred in python script name [{0}] line number [{1}] error message [{2}]".format(
+        file_name, line_number, str(error_message)
+    )
+    return error_message
 
 
 class CustomException(Exception):
