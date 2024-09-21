@@ -1,2 +1,2 @@
-﻿# MLops-Project
+﻿# ML-Project
  student performance indicator
